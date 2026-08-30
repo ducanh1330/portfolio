@@ -1,0 +1,537 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Alex Doan — Software Developer</title>
+  <meta name="description" content="Portfolio of Alex Doan, software developer — selected projects, experience, and coursework." />
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link href="https://fonts.googleapis.com/css2?family=Anton&family=Space+Grotesk:wght@400;500;600&family=IBM+Plex+Mono:wght@400;500;600&display=swap" rel="stylesheet" />
+  <link rel="stylesheet" href="styles/main.css" />
+</head>
+<body>
+
+  <div class="preloader" id="preloader">
+    <div class="preloader-mark"><span>AD</span></div>
+    <div class="preloader-status">
+      <span id="preloaderLabel">Loading</span>
+      <span id="preloaderPercent">0%</span>
+    </div>
+    <div class="preloader-bar"><div class="preloader-bar-fill" id="preloaderFill"></div></div>
+  </div>
+
+  <div class="grain-overlay" aria-hidden="true"></div>
+
+  <header class="site-nav" id="siteNav">
+    <a href="#top" class="nav-mark"><span class="nav-monogram"><span>AD</span></span>Alex Doan</a>
+    <button class="nav-toggle" id="navToggle" aria-expanded="false" aria-controls="navLinks" aria-label="Toggle navigation">
+      <span></span>
+    </button>
+    <ul class="nav-links" id="navLinks">
+      <li><a href="#work">Work</a></li>
+      <li><a href="#hero">About</a></li>
+      <li><a href="#experience">Experience</a></li>
+      <li><a href="#contact">Contact</a></li>
+    </ul>
+  </header>
+
+  <main id="top">
+
+    <div class="hero-pin-wrap" id="heroPinWrap">
+      <section class="hero" id="hero">
+        <canvas class="hero-canvas" id="heroCanvas"></canvas>
+        <div class="wrap hero-layout">
+          <div class="hero-content">
+            <p class="hero-eyebrow">Melbourne, VIC</p>
+            <h1 class="hero-title" id="heroTitle" data-split-text><em>Software</em> Engineer.</h1>
+            <p class="hero-lede">Hi, I'm Alex — an entry-level software engineer based in Melbourne, building full-stack and AI-powered applications. I care about clean architecture and documentation as much as the feature itself.</p>
+            <dl class="hero-facts">
+              <div class="hero-fact">
+                <dt>Based in</dt>
+                <dd>Melbourne, VIC</dd>
+              </div>
+              <div class="hero-fact">
+                <dt>Currently</dt>
+                <dd>Monash University</dd>
+              </div>
+              <div class="hero-fact">
+                <dt>Education</dt>
+                <dd>UTS — WAM 86</dd>
+              </div>
+            </dl>
+            <div class="hero-actions">
+              <a class="btn" href="#work">View Work</a>
+              <a class="btn btn-outline" href="https://github.com/ducanh1330" target="_blank" rel="noopener">GitHub ↗</a>
+            </div>
+          </div>
+          <div class="hero-portrait">
+            <span class="hero-portrait-ring"></span>
+            <img src="photo/avatar.jpg" alt="Alex Doan" width="320" height="320" loading="eager" />
+          </div>
+        </div>
+        <div class="hero-pillars" id="heroPillars">
+          <div class="hero-pillar" data-pillar="0">
+            <span class="hero-pillar-index-number">01</span>
+            <p class="hero-pillar-eyebrow">Capability</p>
+            <h3 class="hero-pillar-title">AI &amp; RAG Systems</h3>
+            <p class="hero-pillar-desc">Self-hosted retrieval-augmented generation — document Q&amp;A with cited, sourced answers, built on FastAPI and SurrealDB.</p>
+          </div>
+          <div class="hero-pillar" data-pillar="1">
+            <span class="hero-pillar-index-number">02</span>
+            <p class="hero-pillar-eyebrow">Capability</p>
+            <h3 class="hero-pillar-title">Full-Stack Development</h3>
+            <p class="hero-pillar-desc">React, Next.js, and Python end to end — from database schema to the last pixel of a responsive UI.</p>
+          </div>
+          <div class="hero-pillar" data-pillar="2">
+            <span class="hero-pillar-index-number">03</span>
+            <p class="hero-pillar-eyebrow">Capability</p>
+            <h3 class="hero-pillar-title">Workflow Automation</h3>
+            <p class="hero-pillar-desc">Automated pipelines for research, job search, and content — built with the WAT framework.</p>
+          </div>
+        </div>
+        <div class="hero-pillar-tag" id="heroPillarTag"></div>
+
+        <div class="hero-scroll">
+          <span class="hero-scroll-line"></span>
+          Scroll
+        </div>
+      </section>
+    </div>
+
+    <section class="wrap" id="skills">
+      <div class="section-head">
+        <div>
+          <p class="section-kicker">Skills</p>
+          <h2 class="section-title">What I build with</h2>
+        </div>
+        <p class="section-note">Tools I reach for daily, and ones I'm sharpening.</p>
+      </div>
+      <div class="skills-grid">
+        <div class="skill-group">
+          <h3>Languages</h3>
+          <ul>
+            <li>Python</li>
+            <li>Java</li>
+            <li>JavaScript</li>
+            <li>SQL</li>
+          </ul>
+        </div>
+        <div class="skill-group">
+          <h3>Frameworks &amp; Platforms</h3>
+          <ul>
+            <li>React &amp; Next.js</li>
+            <li>FastAPI</li>
+            <li>SurrealDB</li>
+            <li>Docker</li>
+          </ul>
+        </div>
+        <div class="skill-group">
+          <h3>AI &amp; Practices</h3>
+          <ul>
+            <li>RAG systems</li>
+            <li>Document processing pipelines</li>
+            <li>Workflow automation (WAT framework)</li>
+            <li>GitHub Copilot, Claude, Cursor</li>
+          </ul>
+        </div>
+      </div>
+    </section>
+
+    <section class="wrap" id="coursework">
+      <div class="section-head">
+        <div>
+          <p class="section-kicker">Coursework</p>
+          <h2 class="section-title">Completed coursework</h2>
+        </div>
+      </div>
+      <ul class="course-list" id="courseList">
+        <li class="course-session course-highlight">Highlights</li>
+        <li class="course-row course-highlight">
+          <span class="course-name">Data Structures and Algorithms</span>
+          <span class="course-meta">UTS — 31251</span>
+          <span class="course-term">High Distinction · 100</span>
+        </li>
+        <li class="course-row course-highlight">
+          <span class="course-name">Cloud Computing and Software as a Service</span>
+          <span class="course-meta">UTS — 41001</span>
+          <span class="course-term">High Distinction · 99</span>
+        </li>
+        <li class="course-row course-highlight">
+          <span class="course-name">Routing and Switching Essentials</span>
+          <span class="course-meta">UTS — 31277</span>
+          <span class="course-term">High Distinction · 94</span>
+        </li>
+        <li class="course-row course-highlight">
+          <span class="course-name">Cryptography</span>
+          <span class="course-meta">UTS — 41900</span>
+          <span class="course-term">High Distinction · 94</span>
+        </li>
+
+        <li class="course-session course-more">2024 — Spring Session</li>
+        <li class="course-row course-more">
+          <span class="course-name">Communication for IT Professionals</span>
+          <span class="course-meta">UTS — 31265</span>
+          <span class="course-term">Credit · 73</span>
+        </li>
+        <li class="course-row course-more">
+          <span class="course-name">Cybersecurity</span>
+          <span class="course-meta">UTS — 48730</span>
+          <span class="course-term">High Distinction · 89</span>
+        </li>
+        <li class="course-row course-more">
+          <span class="course-name">Mobile Networking</span>
+          <span class="course-meta">UTS — 31275</span>
+          <span class="course-term">Credit · 74</span>
+        </li>
+        <li class="course-row course-more">
+          <span class="course-name">Routing and Switching Essentials</span>
+          <span class="course-meta">UTS — 31277</span>
+          <span class="course-term">High Distinction · 94</span>
+        </li>
+
+        <li class="course-session course-more">2025 — Autumn Session</li>
+        <li class="course-row course-more">
+          <span class="course-name">Cloud Computing and Software as a Service</span>
+          <span class="course-meta">UTS — 41001</span>
+          <span class="course-term">High Distinction · 99</span>
+        </li>
+        <li class="course-row course-more">
+          <span class="course-name">Data Structures and Algorithms</span>
+          <span class="course-meta">UTS — 31251</span>
+          <span class="course-term">High Distinction · 100</span>
+        </li>
+        <li class="course-row course-more">
+          <span class="course-name">Project Management and the Professional</span>
+          <span class="course-meta">UTS — 31272</span>
+          <span class="course-term">Distinction · 76</span>
+        </li>
+        <li class="course-row course-more">
+          <span class="course-name">Software Defined Networks</span>
+          <span class="course-meta">UTS — 41905</span>
+          <span class="course-term">High Distinction · 85</span>
+        </li>
+
+        <li class="course-session course-more">2025 — Spring Session</li>
+        <li class="course-row course-more">
+          <span class="course-name">Application Development with .NET</span>
+          <span class="course-meta">UTS — 31927</span>
+          <span class="course-term">High Distinction · 94</span>
+        </li>
+        <li class="course-row course-more">
+          <span class="course-name">Fundamentals of Interaction Design</span>
+          <span class="course-meta">UTS — 31260</span>
+          <span class="course-term">Distinction · 75</span>
+        </li>
+        <li class="course-row course-more">
+          <span class="course-name">Internetworking Project</span>
+          <span class="course-meta">UTS — 31261</span>
+          <span class="course-term">Distinction · 81</span>
+        </li>
+        <li class="course-row course-more">
+          <span class="course-name">Network Servers</span>
+          <span class="course-meta">UTS — 31338</span>
+          <span class="course-term">Pass · 62</span>
+        </li>
+
+        <li class="course-session course-more">2026 — Autumn Session</li>
+        <li class="course-row course-more">
+          <span class="course-name">Cryptography</span>
+          <span class="course-meta">UTS — 41900</span>
+          <span class="course-term">High Distinction · 94</span>
+        </li>
+        <li class="course-row course-more">
+          <span class="course-name">Introduction to Software Development</span>
+          <span class="course-meta">UTS — 41025</span>
+          <span class="course-term">High Distinction · 86</span>
+        </li>
+        <li class="course-row course-more">
+          <span class="course-name">Multilayer Switched Networks</span>
+          <span class="course-meta">UTS — 32011</span>
+          <span class="course-term">Distinction · 75</span>
+        </li>
+        <li class="course-row course-more">
+          <span class="course-name">TD: Transdisciplinary Action Lab</span>
+          <span class="course-meta">UTS — 95008</span>
+          <span class="course-term">Distinction · 81</span>
+        </li>
+      </ul>
+      <button class="course-toggle" id="courseToggle" aria-expanded="false" aria-controls="courseList">
+        <span class="course-toggle-label">Show all coursework (16)</span>
+        <span class="course-toggle-icon" aria-hidden="true">▾</span>
+      </button>
+    </section>
+
+    <section class="wrap" id="experience">
+      <div class="section-head">
+        <div>
+          <p class="section-kicker">Experience</p>
+          <h2 class="section-title">Where I've worked</h2>
+        </div>
+      </div>
+      <div class="timeline">
+        <div class="timeline-item">
+          <span class="timeline-date">Oct 2025 — Jul 2026</span>
+          <div>
+            <h3 class="timeline-role">Software Engineering Intern</h3>
+            <p class="timeline-org">
+              <span class="timeline-logo"><img src="photo/logo-fpt.jpg" alt="FPT Software logo" width="28" height="22" loading="lazy" /></span>
+              FPT Software, Sydney NSW
+            </p>
+            <ul class="timeline-points">
+              <li>Developed a self-hosted AI research assistant for local FPT employees, enabling document Q&amp;A, cited answers, summaries, and summary-slide PDF generation — reducing manual document-review time by approximately 25%.</li>
+              <li>Supported 7 source types and automated document research across 4 deployment environments using Next.js, FastAPI, SurrealDB, Ollama, and Docker.</li>
+              <li>Maintained approximately 99.5% uptime during internal testing, supporting reliable access for local users.</li>
+            </ul>
+          </div>
+        </div>
+        <div class="timeline-item">
+          <span class="timeline-date">Oct 2024 — Jan 2026</span>
+          <div>
+            <h3 class="timeline-role">Peer Mentor</h3>
+            <p class="timeline-org">
+              <span class="timeline-logo"><img src="photo/UTS-Logo-Syd.jpg.webp" alt="University of Technology Sydney logo" width="60" height="30" loading="lazy" /></span>
+              UTS College, Sydney NSW
+            </p>
+            <ul class="timeline-points">
+              <li>Mentored 30+ students across academic support, personal development, and career planning.</li>
+              <li>Provided guidance on study strategies, time management, and professional development — helping 90% of students improve grades.</li>
+              <li>Facilitated 100% of college events and mentoring activities to strengthen student engagement.</li>
+            </ul>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <section class="wrap" id="work">
+      <div class="section-head">
+        <div>
+          <p class="section-kicker">Selected Work</p>
+          <h2 class="section-title">Projects</h2>
+        </div>
+        <p class="section-note">A handful of things I've built recently. Click through for the full write-up, code, and a live link.</p>
+      </div>
+      <div class="work-carousel" id="workCarousel">
+        <button class="work-arrow work-arrow-prev" id="workPrev" aria-label="Previous project">←</button>
+        <ul class="work-viewport" id="workViewport" data-lenis-prevent>
+          <li class="work-slide is-active" data-index="0">
+            <a class="work-card" href="projects/fpt-llm.html">
+              <div class="work-flip">
+                <div class="work-face work-face-front">
+                  <p class="work-face-kicker">AI · RAG System</p>
+                  <div>
+                    <h3 class="work-face-title">FPT-LLM</h3>
+                    <p class="work-face-desc">Self-hosted AI research assistant built during my FPT Software internship.</p>
+                  </div>
+                  <div class="work-face-foot">
+                    <span>~25% Faster Review</span>
+                    <span class="work-face-arrow" aria-hidden="true">&rarr;</span>
+                  </div>
+                </div>
+                <div class="work-face work-face-back">
+                  <p class="work-face-kicker">The Detail</p>
+                  <p class="work-face-detail">Document Q&amp;A with cited, sourced answers, summaries, and summary-slide PDF generation — across 7 source types and 4 deployment environments. Held ~99.5% uptime in internal testing.</p>
+                  <div class="work-face-foot">
+                    <span>Next.js · FastAPI · SurrealDB</span>
+                    <span class="work-face-arrow" aria-hidden="true">&rarr;</span>
+                  </div>
+                </div>
+              </div>
+            </a>
+          </li>
+          <li class="work-slide" data-index="1">
+            <a class="work-card" href="projects/newsletter-automation-workflow.html">
+              <div class="work-flip">
+                <div class="work-face work-face-front">
+                  <p class="work-face-kicker">Automation · WAT</p>
+                  <div>
+                    <h3 class="work-face-title">Newsletter Automation</h3>
+                    <p class="work-face-desc">Automated newsletter distribution workflow built with the WAT framework.</p>
+                  </div>
+                  <div class="work-face-foot">
+                    <span>Python</span>
+                    <span class="work-face-arrow" aria-hidden="true">&rarr;</span>
+                  </div>
+                </div>
+                <div class="work-face work-face-back">
+                  <p class="work-face-kicker">The Detail</p>
+                  <p class="work-face-detail">Assembles and sends recurring newsletters end to end, taking the repetitive manual steps out of every send.</p>
+                  <div class="work-face-foot">
+                    <span>Python · WAT Framework</span>
+                    <span class="work-face-arrow" aria-hidden="true">&rarr;</span>
+                  </div>
+                </div>
+              </div>
+            </a>
+          </li>
+          <li class="work-slide" data-index="2">
+            <a class="work-card" href="projects/competitor-research-automation.html">
+              <div class="work-flip">
+                <div class="work-face work-face-front">
+                  <p class="work-face-kicker">Automation · WAT</p>
+                  <div>
+                    <h3 class="work-face-title">Competitor Research</h3>
+                    <p class="work-face-desc">Automated competitor research and analysis workflow built with the WAT framework.</p>
+                  </div>
+                  <div class="work-face-foot">
+                    <span>Python</span>
+                    <span class="work-face-arrow" aria-hidden="true">&rarr;</span>
+                  </div>
+                </div>
+                <div class="work-face work-face-back">
+                  <p class="work-face-kicker">The Detail</p>
+                  <p class="work-face-detail">Gathers and organises competitive intelligence on a schedule, replacing repetitive manual lookups with a single pipeline.</p>
+                  <div class="work-face-foot">
+                    <span>Python · WAT Framework</span>
+                    <span class="work-face-arrow" aria-hidden="true">&rarr;</span>
+                  </div>
+                </div>
+              </div>
+            </a>
+          </li>
+          <li class="work-slide" data-index="3">
+            <a class="work-card" href="projects/job-search-automation.html">
+              <div class="work-flip">
+                <div class="work-face work-face-front">
+                  <p class="work-face-kicker">Automation · WAT</p>
+                  <div>
+                    <h3 class="work-face-title">Job Search Automation</h3>
+                    <p class="work-face-desc">Automated job search workflow built with the WAT framework.</p>
+                  </div>
+                  <div class="work-face-foot">
+                    <span>Python</span>
+                    <span class="work-face-arrow" aria-hidden="true">&rarr;</span>
+                  </div>
+                </div>
+                <div class="work-face work-face-back">
+                  <p class="work-face-kicker">The Detail</p>
+                  <p class="work-face-detail">Streamlines tracking listings and applications so the repetitive parts of a job search run on their own.</p>
+                  <div class="work-face-foot">
+                    <span>Python · WAT Framework</span>
+                    <span class="work-face-arrow" aria-hidden="true">&rarr;</span>
+                  </div>
+                </div>
+              </div>
+            </a>
+          </li>
+          <li class="work-slide" data-index="4">
+            <a class="work-card" href="projects/iot-bay-marketplace.html">
+              <div class="work-flip">
+                <div class="work-face work-face-front">
+                  <p class="work-face-kicker">University · Group Project</p>
+                  <div>
+                    <h3 class="work-face-title">IOT Bay Marketplace</h3>
+                    <p class="work-face-desc">A marketplace platform for IoT devices, built as a university group project.</p>
+                  </div>
+                  <div class="work-face-foot">
+                    <span>Team Project</span>
+                    <span class="work-face-arrow" aria-hidden="true">&rarr;</span>
+                  </div>
+                </div>
+                <div class="work-face work-face-back">
+                  <p class="work-face-kicker">The Detail</p>
+                  <p class="work-face-detail">Buying and selling IoT devices with listings, accounts, and orders. This repository is a personal copy shared for portfolio purposes only.</p>
+                  <div class="work-face-foot">
+                    <span>Python</span>
+                    <span class="work-face-arrow" aria-hidden="true">&rarr;</span>
+                  </div>
+                </div>
+              </div>
+            </a>
+          </li>
+          <li class="work-slide" data-index="5">
+            <a class="work-card" href="projects/customisable-widget-dashboard.html">
+              <div class="work-flip">
+                <div class="work-face work-face-front">
+                  <p class="work-face-kicker">University · Terminal App</p>
+                  <div>
+                    <h3 class="work-face-title">Widget Dashboard</h3>
+                    <p class="work-face-desc">A terminal-based, customisable widget dashboard built with a partner in C.</p>
+                  </div>
+                  <div class="work-face-foot">
+                    <span>Built in C</span>
+                    <span class="work-face-arrow" aria-hidden="true">&rarr;</span>
+                  </div>
+                </div>
+                <div class="work-face work-face-back">
+                  <p class="work-face-kicker">The Detail</p>
+                  <p class="work-face-detail">Lets users personalise their workspace by adding, removing, and rearranging widgets directly from the command line.</p>
+                  <div class="work-face-foot">
+                    <span>C</span>
+                    <span class="work-face-arrow" aria-hidden="true">&rarr;</span>
+                  </div>
+                </div>
+              </div>
+            </a>
+          </li>
+          <li class="work-slide" data-index="6">
+            <a class="work-card" href="projects/youtube-analysis.html">
+              <div class="work-flip">
+                <div class="work-face work-face-front">
+                  <p class="work-face-kicker">Data · Analysis</p>
+                  <div>
+                    <h3 class="work-face-title">Youtube Analysis</h3>
+                    <p class="work-face-desc">A tool for analysing YouTube channel and video data.</p>
+                  </div>
+                  <div class="work-face-foot">
+                    <span>Python</span>
+                    <span class="work-face-arrow" aria-hidden="true">&rarr;</span>
+                  </div>
+                </div>
+                <div class="work-face work-face-back">
+                  <p class="work-face-kicker">The Detail</p>
+                  <p class="work-face-detail">Summary inferred from the repository name — the repo has no description set, so replace this with the real project write-up.</p>
+                  <div class="work-face-foot">
+                    <span>Python</span>
+                    <span class="work-face-arrow" aria-hidden="true">&rarr;</span>
+                  </div>
+                </div>
+              </div>
+            </a>
+          </li>
+
+        </ul>
+        <button class="work-arrow work-arrow-next" id="workNext" aria-label="Next project">→</button>
+
+        <div class="work-controls">
+          <div class="work-dots" id="workDots" role="tablist" aria-label="Project slides">
+            <button class="work-dot is-active" data-index="0" aria-label="Go to project 1" aria-selected="true"></button>
+            <button class="work-dot" data-index="1" aria-label="Go to project 2" aria-selected="false"></button>
+            <button class="work-dot" data-index="2" aria-label="Go to project 3" aria-selected="false"></button>
+            <button class="work-dot" data-index="3" aria-label="Go to project 4" aria-selected="false"></button>
+            <button class="work-dot" data-index="4" aria-label="Go to project 5" aria-selected="false"></button>
+            <button class="work-dot" data-index="5" aria-label="Go to project 6" aria-selected="false"></button>
+            <button class="work-dot" data-index="6" aria-label="Go to project 7" aria-selected="false"></button>
+          </div>
+          <button class="work-playpause" id="workPlayPause" aria-pressed="false" aria-label="Pause autoplay">❚❚</button>
+        </div>
+      </div>
+    </section>
+
+    <section class="wrap contact" id="contact">
+      <p class="section-kicker" style="justify-content:center;">Contact</p>
+      <h2 class="contact-title">Let's build<br><em>something</em><br>together.</h2>
+      <p class="contact-lede">Have a project in mind, an internship opening, or just want to talk shop? I'd love to hear from you.</p>
+      <div class="contact-actions">
+        <a class="btn" href="mailto:alexdoan1303@gmail.com">Start a Conversation</a>
+        <a class="btn btn-outline" href="https://github.com/ducanh1330" target="_blank" rel="noopener">See the Code</a>
+      </div>
+    </section>
+
+  </main>
+
+  <footer class="site-footer wrap">
+    <p class="footer-note">© 2026 Alex Doan. All rights reserved.</p>
+    <ul class="footer-socials">
+      <li><a href="https://github.com/ducanh1330" target="_blank" rel="noopener">GitHub</a></li>
+      <li><a href="https://www.linkedin.com/in/duy-duc-anh-doan-888806292/" target="_blank" rel="noopener">LinkedIn</a></li>
+      <li><a href="mailto:alexdoan1303@gmail.com">Email</a></li>
+    </ul>
+  </footer>
+
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.5/gsap.min.js" defer></script>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.5/ScrollTrigger.min.js" defer></script>
+  <script src="https://unpkg.com/lenis@1.1.13/dist/lenis.min.js" defer></script>
+  <script src="scripts/main.js" defer></script>
+</body>
+</html>
