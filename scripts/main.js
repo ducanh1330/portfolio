@@ -147,7 +147,17 @@ if (!prefersReducedMotion && window.Lenis && window.gsap && window.ScrollTrigger
   }
   draw(0);
 
-  if (!window.gsap || !window.ScrollTrigger) return;
+  if (!window.gsap || !window.ScrollTrigger) {
+    // GSAP/ScrollTrigger failed to load (CDN outage, ad-blocker, corporate
+    // proxy blocking the script). Without this, the pillars stay at their
+    // CSS default of opacity: 0 forever, permanently hiding the three
+    // capability blurbs from anyone who hits this path. Reveal them as a
+    // plain stacked list instead - see .hero-pillar-fallback in main.css.
+    document.querySelectorAll(".hero-pillar").forEach((pillar) => {
+      pillar.classList.add("hero-pillar-fallback");
+    });
+    return;
+  }
 
   const heroTitleEl = document.getElementById("heroTitle");
   const heroEyebrowEl = document.querySelector(".hero-eyebrow");

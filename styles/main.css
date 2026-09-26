@@ -616,6 +616,16 @@ button:focus-visible {
 /* ==========================================================================
    Hero pillars — key skills revealed while scrolling through the pin
    ========================================================================== */
+.hero-pillar-fallback {
+  position: static !important;
+  opacity: 1 !important;
+  transform: none !important;
+  margin-block: 1.5rem;
+  max-width: var(--container);
+  margin-inline: auto;
+  padding-inline: var(--gutter);
+}
+
 .hero-pillars {
   position: absolute;
   inset: 0;
@@ -1316,6 +1326,8 @@ hr.rule {
 
 .footer-socials {
   display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
   gap: 0.75rem;
   list-style: none;
   margin: 0;
